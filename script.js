@@ -21,8 +21,8 @@ if (hamburger) {
 // Close menu when clicking on a link
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
-        hamburger.classList.remove('active');
+        navMenu?.classList.remove('active');
+        hamburger?.classList.remove('active');
     });
 });
 
@@ -135,7 +135,9 @@ const animateSkills = () => {
     });
 };
 
-window.addEventListener('scroll', animateSkills);
+// Run animation on scroll (passive) and on load to catch visible bars
+window.addEventListener('scroll', animateSkills, { passive: true });
+window.addEventListener('load', animateSkills);
 
 // Intersection Observer for Fade-in Animations
 const observerOptions = {

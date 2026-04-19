@@ -1,0 +1,8 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "resume-webpage",
+  "compatibility_date": "2026-01-25",
+  "assets": {
+    "directory": "./" 
+  }
+}
